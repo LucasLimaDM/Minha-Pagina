@@ -53,13 +53,18 @@ nav button:hover:nth-child(2n-1){
     box-shadow: 5px 12px 15px -10px #9c10d8 ;
 }
 .presentation{
-    margin: 35px 0px 35px 35px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.presentation-text{
+    margin: 20px 40px;
     max-width: 600px;
 }
-.presentation h2{
+.presentation-text h2{
     position: relative;
 }
-.presentation h2::before{
+.presentation-text h2::before{
     content: '';
     position: absolute;
     left: 0;
@@ -73,6 +78,12 @@ nav button:hover:nth-child(2n-1){
 }
 .presentation:hover h2::before{
     scale: 1;
+}
+#image{
+    background-color: white;
+    aspect-ratio: 1/1.15;
+    width: 80%;
+    max-width: 400px;
 }
 @media(max-width:700px){
     header.flex-row{
