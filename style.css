@@ -14,6 +14,16 @@
     align-items: center;
     gap: 15px;
 }
+.container-center{
+    margin-top: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.box-texto{
+    margin: 40px 0px;
+    max-width: 600px;
+}
 section{
     margin-bottom: 35px;
 }
@@ -26,10 +36,6 @@ header{
     flex-flow: row nowrap;
     justify-content: baseline;
     height: 80px;
-    width: 100vw;
-    background-color: #101214 !important;
-    position: fixed;
-    top: 0;
 }
 h1{
     margin: 24px 10px 24px 30px;
@@ -58,16 +64,14 @@ nav button:hover:nth-child(2n-1){
     transition: box-shadow 500ms;
     box-shadow: 5px 12px 15px -10px #9c10d8 ;
 }
-.presentation{
-    margin-top: 80px;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+#presentation{
+    justify-content: space-around;
+    align-items: flex-start;
 }
-.presentation-text{
-    margin: 20px 40px;
-    max-width: 600px;
+#contato{
+    align-items: center;
 }
+
 .presentation-text h2{
     position: relative;
 }
@@ -100,7 +104,10 @@ a:hover{
     text-decoration: underline;
     transition:800ms;
 }
-
+#midias-sociais{
+    display: flex;
+    gap: 30px;
+}
 @media(max-width:700px){
     header.flex-row{
         height: 140px;
