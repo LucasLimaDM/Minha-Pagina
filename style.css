@@ -8,14 +8,16 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
 }
 .flex-row{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
+    justify-content: space-around;
 }
-.container-center{
-    margin-top: 40px;
+.container{
+    margin-top: 50px;
     width: 100%;
     flex-wrap: wrap;
     
@@ -24,8 +26,13 @@
     margin: 40px 0px;
     max-width: 600px;
 }
+/* configurações gerais do site */
 section{
-    margin-bottom: 35px;
+    min-height: 75vh;
+}
+footer{
+    border-top: 1px solid #212121;
+    margin-top: 50px;
 }
 body{
     color: #f3f3f5;
@@ -39,6 +46,23 @@ header{
 }
 h1{
     margin: 24px 10px 24px 30px;
+}
+iframe{
+    background-color: #f3f3f5;
+    width: 70vw;
+    height: 70vw;
+    max-width: 500px;
+    max-height: 520px;
+    min-width: 350px;
+    overflow-y: hidden;
+}
+article{
+    width: 100%;
+    display: flex;
+
+}
+article:nth-child(2n - 1){
+    justify-content: flex-end;
 }
 nav{
     width: 100%;
@@ -56,6 +80,7 @@ nav button{
     cursor: pointer;
     transition: box-shadow 150ms;
 }
+/* configuração do menu */
 nav button:hover:nth-child(2n){
     transition: box-shadow 500ms;
     box-shadow: 5px 12px 15px -10px #080bdb ;
@@ -64,14 +89,23 @@ nav button:hover:nth-child(2n-1){
     transition: box-shadow 500ms;
     box-shadow: 5px 12px 15px -10px #9c10d8 ;
 }
+a{
+    color: #f3f3f5;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    transition:800ms;
+}
+/* configuração da section de apresentação */
 #presentation{
     justify-content: space-around;
     align-items: flex-start;
 }
-#contato{
-    align-items: center;
+#presentation:hover h2::before{
+    scale: 1;
 }
-
+/* configuração do texto de apresentação */
 .presentation-text h2{
     position: relative;
 }
@@ -87,26 +121,37 @@ nav button:hover:nth-child(2n-1){
     transform-origin: left;
     transition: scale 700ms;
 }
-.presentation:hover h2::before{
-    scale: 1;
+#informacoes .box-texto{
+    margin: 0;
+    padding: 0px 30px;
 }
-#image{
-    background-color: white;
-    aspect-ratio: 1/1.15;
-    width: 80%;
-    max-width: 400px;
-}
-a{
-    color: #f3f3f5;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-    transition:800ms;
+#single-site{
+    margin-bottom: 30px;
 }
 #midias-sociais{
     display: flex;
     gap: 30px;
+}
+
+/* imagem teorica */
+#image{
+    background-color: white;
+    aspect-ratio: 1/1.35;
+    width: 80%;
+    max-width: 400px;
+}
+
+
+
+@media(max-width:1080px){
+    #container-site{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    iframe{
+        max-width: 800px;
+    }
+    
 }
 @media(max-width:700px){
     header.flex-row{
@@ -121,6 +166,7 @@ a:hover{
         height: 80px;
     }
 }
+
 
 
 
