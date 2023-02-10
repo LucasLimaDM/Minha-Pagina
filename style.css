@@ -12,7 +12,6 @@
 }
 .flex-row{
     display: flex;
-    align-items: flex-start;
     gap: 15px;
     justify-content: space-around;
 }
@@ -27,13 +26,6 @@
     max-width: 600px;
 }
 /* configurações gerais do site */
-section{
-    min-height: 75vh;
-}
-footer{
-    border-top: 1px solid #212121;
-    margin-top: 50px;
-}
 body{
     color: #f3f3f5;
     background-color: #101214;
@@ -41,28 +33,12 @@ body{
 header{
     border-bottom: 1px solid #212121;
     flex-flow: row nowrap;
-    justify-content: baseline;
+    align-items: baseline;
     height: 80px;
 }
-h1{
-    margin: 24px 10px 24px 30px;
-}
-iframe{
-    background-color: #f3f3f5;
-    width: 70vw;
-    height: 70vw;
-    max-width: 500px;
-    max-height: 520px;
-    min-width: 350px;
-    overflow-y: hidden;
-}
-article{
-    width: 100%;
-    display: flex;
 
-}
-article:nth-child(2n - 1){
-    justify-content: flex-end;
+section{
+    min-height: 75vh;
 }
 nav{
     width: 100%;
@@ -80,14 +56,18 @@ nav button{
     cursor: pointer;
     transition: box-shadow 150ms;
 }
-/* configuração do menu */
-nav button:hover:nth-child(2n){
-    transition: box-shadow 500ms;
-    box-shadow: 5px 12px 15px -10px #080bdb ;
+article{
+    width: 100%;
+    display: flex;
 }
-nav button:hover:nth-child(2n-1){
-    transition: box-shadow 500ms;
-    box-shadow: 5px 12px 15px -10px #9c10d8 ;
+iframe{
+    background-color: #f3f3f5;
+    width: 70vw;
+    height: 70vw;
+    max-width: 500px;
+    max-height: 520px;
+    min-width: 350px;
+    overflow-y: hidden;
 }
 a{
     color: #f3f3f5;
@@ -97,19 +77,33 @@ a:hover{
     text-decoration: underline;
     transition:800ms;
 }
+footer{
+    border-top: 1px solid #212121;
+    margin-top: 50px;
+}
+/* configuração do menu */
+nav button:hover:nth-child(2n){
+    transition: box-shadow 500ms;
+    box-shadow: 5px 12px 15px -10px #080bdb ;
+}
+nav button:hover:nth-child(2n-1){
+    transition: box-shadow 500ms;
+    box-shadow: 5px 12px 15px -10px #9c10d8 ;
+}
+/* configuração dos articles de informação */
+article:nth-child(2n - 1){
+    justify-content: flex-end;
+}
 /* configuração da section de apresentação */
 #presentation{
     justify-content: space-around;
     align-items: flex-start;
 }
-#presentation:hover h2::before{
-    scale: 1;
-}
 /* configuração do texto de apresentação */
-.presentation-text h2{
+#presentation-text h2{
     position: relative;
 }
-.presentation-text h2::before{
+#presentation-text h2::before{
     content: '';
     position: absolute;
     left: 0;
@@ -121,7 +115,10 @@ a:hover{
     transform-origin: left;
     transition: scale 700ms;
 }
-#informacoes .box-texto{
+#presentation:hover h2::before{
+    scale: 1;
+}
+#informacoes article{
     margin: 16px 30px;
 }
 #single-site{
