@@ -58,7 +58,6 @@ nav button{
 }
 article{
     width: 100%;
-    display: flex;
 }
 iframe{
     background-color: #f3f3f5;
