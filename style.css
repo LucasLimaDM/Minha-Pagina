@@ -57,7 +57,9 @@ nav button{
     transition: box-shadow 150ms;
 }
 article{
+    display: flex;
     width: 100%;
+    justify-content: flex-start;
 }
 iframe{
     background-color: #f3f3f5;
@@ -117,8 +119,8 @@ article:nth-child(2n - 1){
 #presentation:hover h2::before{
     scale: 1;
 }
-#informacoes article{
-    margin: 16px 30px;
+#informacoes .box-texto{
+    margin: 16px;
 }
 #single-site{
     margin-bottom: 30px;
