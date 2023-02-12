@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.4px;
 }
 .flex-column{
     display: flex;
@@ -35,6 +36,7 @@ header{
     flex-flow: row nowrap;
     align-items: baseline;
     height: 80px;
+    padding-left: 10px;
 }
 
 section{
@@ -129,17 +131,10 @@ article:nth-child(2n - 1){
     display: flex;
     gap: 30px;
 }
-
-/* imagem teorica */
 #image{
-    background-color: white;
-    aspect-ratio: 1/1.35;
     width: 80%;
-    max-width: 400px;
+    max-width: 470px;
 }
-
-
-
 @media(max-width:1080px){
     #container-site{
         flex-flow: column nowrap;
@@ -156,9 +151,7 @@ article:nth-child(2n - 1){
         flex-wrap: wrap;
         gap: 0px;
     }
-    h1{
-        margin: 20px 0px 0px 50px !important;
-    }
+    
     nav{
         height: 80px;
     }
