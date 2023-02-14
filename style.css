@@ -61,7 +61,7 @@ nav button{
     cursor: pointer;
     transition: box-shadow 150ms;
 }
-article{
+#informacoes article{
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -97,7 +97,7 @@ nav button:hover:nth-child(2n-1){
     box-shadow: 5px 12px 15px -10px #9c10d8 ;
 }
 /* configuração dos articles de informação */
-article:nth-child(2n - 1){
+#informacoes article:nth-child(2n - 1){
     justify-content: flex-end;
 }
 /* configuração da section de apresentação */
