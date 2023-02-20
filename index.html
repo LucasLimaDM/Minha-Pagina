@@ -16,18 +16,21 @@
 
         <h1>Lucas</h1>
 
-        <nav class="flex-row">
-            <button onclick="window.location.href = '#presentation'"> Apresentação
-            </button>
-            <button onclick="window.location.href = '#projetos'"> Projetos  
-            </button>
-            <button onclick="window.location.href = '#informacoes'">Sobre mim
-            </button>
-            <button onclick="window.location.href = '#contato'"> Contato 
-            </button>
+        <nav id="container-buttons" class="flex-row">
+            <button>Apresentação</button>
+            <button>Projetos</button>
+            <button>Sobre mim</button>
+            <button>Contato</button>
         </nav>
 
+        <button id="menu" class="flex-column">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
+    <nav id="sidebar" class="flex-column"></nav>
 
 
 
@@ -124,5 +127,7 @@
             </p>
 
         </footer>
+
+        <script src="script.js"></script>
 </body>
 </html>

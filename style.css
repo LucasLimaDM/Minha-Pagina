@@ -4,6 +4,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.4px;
+    scroll-behavior: smooth;
 }
 .flex-column{
     display: flex;
@@ -26,6 +27,11 @@
     margin: 40px 16px;
     max-width: 600px;
 }
+.open{
+    translate: 0px 200px;
+    transition: translate 1s;
+}
+
 /* configurações gerais do site */
 body{
     color: #f3f3f5;
@@ -34,9 +40,14 @@ body{
 header{
     border-bottom: 1px solid #212121;
     flex-flow: row nowrap;
-    align-items: baseline;
+    align-items: center;
+    background-color: #101214;
     height: 80px;
     padding-left: 10px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
 }
 header h1{
     padding: 0px 30px;
@@ -51,15 +62,17 @@ nav{
     justify-content: space-around;
     gap: 0px !important;
 }
-nav button{
+button{
     color: #f3f3f5;
     border: none;
-    width: 25%;
-    height: 100%;
     background-color: #101214;
     font-size: 1em;
     cursor: pointer;
     transition: box-shadow 150ms;
+}
+header nav button{
+    width: 25%;
+    height: 100%;
 }
 #informacoes article{
     display: flex;
@@ -88,16 +101,24 @@ footer{
     margin-top: 50px;
 }
 /* configuração do menu */
-nav button:hover:nth-child(2n){
+header nav button:hover:nth-child(2n){
     transition: box-shadow 500ms;
     box-shadow: 5px 12px 15px -10px #080bdb ;
 }
-nav button:hover:nth-child(2n-1){
+header nav button:hover:nth-child(2n-1){
     transition: box-shadow 500ms;
     box-shadow: 5px 12px 15px -10px #9c10d8 ;
 }
+#sidebar button:hover:nth-child(2n){
+    transition: box-shadow 500ms;
+    box-shadow: -20px 0px 20px -20px #080bdb ;
+}
+#sidebar button:hover:nth-child(2n-1){
+    transition: box-shadow 500ms;
+    box-shadow: -20px 0px 20px -20px #9c10d8 ;
+}
 /* configuração dos articles de informação */
-#informacoes article:nth-child(2n - 1){
+#informacoes article:nth-child(2n -  1){
     justify-content: flex-end;
 }
 /* configuração da section de apresentação */
@@ -108,6 +129,7 @@ nav button:hover:nth-child(2n-1){
 /* configuração do texto de apresentação */
 #presentation-text h2{
     position: relative;
+    z-index: 1;
 }
 #presentation-text h2::before{
     content: '';
@@ -138,6 +160,50 @@ nav button:hover:nth-child(2n-1){
     width: 80%;
     max-width: 470px;
 }
+#sidebar{
+    position: fixed;
+    top: -120px;
+    width: 100%;
+    height: 200px;
+    right: 0px;
+    z-index: 2;
+    background-color: #101214;
+    border-radius: 0px 10px;
+    border-left: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    align-items: flex-start;
+    transition: translate .8s;
+}
+#sidebar button{
+    text-align: justify;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+#sidebar button:hover{
+    background-color: #161618;
+}
+#sidebar button::before{ 
+    content: ' - ';
+}
+#menu{
+    width: 30px;
+    height: 21px;
+    justify-content: space-between;
+    gap: 0;
+    position: relative;
+    background-color: #101214;
+    display: none;
+}
+#menu span{
+    display: block;
+    background-color: #f3f3f5;
+    height: 2px;
+    width: 30px;
+    border-radius: 2px;
+}
+
 @media(max-width:1080px){
     #container-site{
         flex-flow: column nowrap;
@@ -148,16 +214,14 @@ nav button:hover:nth-child(2n-1){
     }
     
 }
-@media(max-width:700px){
-    header.flex-row{
-        height: 140px;
-        flex-wrap: wrap;
-        gap: 0px;
+@media(max-width:720px){
+    header #container-buttons{
+        display: none !important;
     }
-    
-    nav{
-        height: 80px;
+    #menu{
+        display: flex !important;
     }
+
 }
 
 
