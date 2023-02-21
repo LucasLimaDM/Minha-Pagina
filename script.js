@@ -11,12 +11,12 @@ for (let i = 0; i < sidebarButtons.length; i++) {
 }
 
 function fechaSidebar() { 
-
+    sidebar.classList.remove('open')
 }
 // ao clicar no menu, fecha ou abre a sidebar
 menu.addEventListener('click', function() {
     if (sidebar.classList.contains('open')) {
-        
+        fechaSidebar()
     } else {
         sidebar.classList.add('open')
     }
@@ -24,9 +24,10 @@ menu.addEventListener('click', function() {
 
 // fecha a sidebar ao alterar tamanho da janela
 document.body.onresize = function(){
-    sidebar.classList.remove('open')
+    fechaSidebar()
 }
 function scrollNaTela(btnNum) {
+    fechaSidebar()
     let targetOffset = document.querySelector(trataPosition(btnNum)).offsetTop
     window.scrollTo(0, targetOffset - 110)
     console.log("🚀 ~ file: script.js:29 ~ scrollNaTela ~ targetOffset", targetOffset)
