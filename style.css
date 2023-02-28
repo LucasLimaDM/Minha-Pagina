@@ -157,6 +157,9 @@ header nav button:hover:nth-child(2n-1){
     display: flex;
     gap: 30px;
 }
+#midias-sociais img{
+    height: 50px;
+}
 #image{
     width: 80%;
     max-width: 470px;
