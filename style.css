@@ -79,14 +79,14 @@ header nav button{
     width: 100%;
     justify-content: flex-start;
 }
-iframe{
+.single-site iframe{
+    border: none;
     background-color: #f3f3f5;
     width: 70vw;
     height: 70vw;
     max-width: 500px;
     max-height: 520px;
     min-width: 350px;
-    overflow-y: hidden;
 }
 a{
     color: #f3f3f5;
@@ -150,7 +150,7 @@ header nav button:hover:nth-child(2n-1){
 #informacoes .box-texto{
     margin: 16px;
 }
-#single-site{
+.single-site{
     margin-bottom: 30px;
 }
 #midias-sociais{

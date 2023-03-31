@@ -26,6 +26,7 @@ menu.addEventListener('click', function() {
 document.body.onresize = function(){
     fechaSidebar();
 }
+
 function scrollNaTela(btnNum) {
     fechaSidebar();
     let targetOffset = document.querySelector(trataPosition(btnNum)).offsetTop;
